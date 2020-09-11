@@ -1,0 +1,27 @@
+{
+  "name": "CSSMarquee",
+  "version": "0.0.2",
+  "main": "./src/marquee.js",
+  "description": "No dependencies javascript marquee based on CSS animations.",
+  "keywords": [
+    "marquee",
+    "vanilla",
+    "CSS animations",
+    "animations"
+  ],
+  "bugs": "david.javapagetemplates@gmail.com",
+  "license": "LGPL-3.0",
+  "author": "David Cana Lopez",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidcana/CSSMarquee"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~1.1.0",
+    "grunt-contrib-compress": "~1.5.0",
+    "grunt-contrib-uglify": "~4.0.1"
+  },
+  "scripts": {}
+}

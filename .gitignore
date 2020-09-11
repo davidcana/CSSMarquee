@@ -1,0 +1,10 @@
+# Linux
+.*
+!.gitignore
+!.htaccess
+*~
+
+# Misc
+node_modules/
+.directory
+npm-debug.log
