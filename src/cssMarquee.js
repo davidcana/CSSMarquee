@@ -22,7 +22,6 @@ var CSSMarquee = function ( defaults ) {
     this.pauseOnMouseEnter = !! this.options.pauseOnMouseEnter;
     this.playOnMouseLeave = !! this.options.playOnMouseLeave;
     this.element = this.options.element;
-    this.id = this.options.id;
     this.animation = this.options.animation || 'marqueeTextIndent {0}s linear infinite';
     
     // Check configuration options
