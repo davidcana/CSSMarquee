@@ -65,6 +65,8 @@ Available methods for **CSSMarquee** instances are:
     <li><strong>destroy( removeText )</strong>. Stops the animation and remove all listeners. If <em>removeText</em> removes the text of the marquee.</li>
 </ul>
 
+Go to [test page](https://davidcana.github.io/CSSMarquee) to see **CSSMarquee** in action!
+
 ## Customizing the CSS animation
 
 If you want to fully customize the CSS animation keep on reading this!

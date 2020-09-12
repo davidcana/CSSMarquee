@@ -11,10 +11,16 @@ module.exports = function(grunt) {
                 expand: true,
                 files: [ 
                     {
+                        cwd: 'docs/',
+                        expand: true,
+                        src: ['**/*', '!**/*~'],
+                        dest: 'docs'
+                    },
+                    {
                         cwd: 'src/',
                         expand: true,
                         src: ['**/*', '!**/*~'],
-                        dest: 'js'
+                        dest: 'src'
                     },
                     {
                         src: ['Gruntfile.js']
@@ -40,11 +46,22 @@ module.exports = function(grunt) {
                     'src/cssMarquee.min.js': [ 'src/cssMarquee.js' ]
                 }
             }
-        }
+        },
+        copy: {
+            dev: {
+                src: 'dist/cssMarquee.js',
+                dest: 'docs/cssMarquee.js'
+            },
+            min: {
+                src: 'dist/cssMarquee.min.js',
+                dest: 'docs/cssMarquee.min.js'
+            }
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     
-    grunt.registerTask('default', ['uglify']);
+    grunt.registerTask('default', ['uglify', 'copy:dev', 'copy:min']);
 };
