@@ -1,2 +1,2 @@
-var CSSMarquee = require('./src/CSSMarquee.js');
-module.exports = CSSMarquee;
+var cssMarquee = require('./src/cssMarquee.js');
+module.exports = cssMarquee;

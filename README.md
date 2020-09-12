@@ -8,7 +8,7 @@ Core features of **CSSMarquee** are:
 **CSSMarquee** is registered as a package on [npm](https://www.npmjs.com/package/zpt). This is the recomended way of downloading it. You can install the latest version of CSSMarquee and its dependencies with the npm CLI command:
 
 ```bash
-npm install CSSMarquee
+npm install css-marquee
 ```
 As an alternative you can download from [github](https://github.com/davidcana/CSSMarquee/archive/master.zip).
 

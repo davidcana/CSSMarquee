@@ -1,5 +1,5 @@
 {
-  "name": "CSSMarquee",
+  "name": "css-marquee",
   "version": "0.2.0",
   "main": "index.js",
   "description": "No dependencies javascript marquee based on CSS animations.",
