@@ -9,7 +9,7 @@
         pauseOnMouseEnter: true,
         playOnMouseLeave: false,
         element: document.getElementById( 'aDiv' ),
-        animation: 'marquee {0}s ease-in-out infinite'
+        animation: 'marqueeTextIndentReverse {0}s linear infinite'
 	});
 */
 var CSSMarquee = function ( defaults ) {
