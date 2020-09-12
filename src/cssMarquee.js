@@ -1,5 +1,5 @@
 /*
-    CSSMarquee
+    CSSMarquee 0.2.0
     No dependencies javascript marquee based on CSS animations
 
 	var myMarquee = new AnimationMarquee({
