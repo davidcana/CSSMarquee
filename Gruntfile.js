@@ -48,6 +48,12 @@ module.exports = function(grunt) {
             }
         },
         copy: {
+            all: {
+                expand: true, 
+                cwd: 'src/', 
+                src: ['**'],
+                dest: 'docs/'
+            },
             dev: {
                 src: 'dist/cssMarquee.js',
                 dest: 'docs/cssMarquee.js'
@@ -63,5 +69,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
     
-    grunt.registerTask('default', ['uglify', 'copy:dev', 'copy:min']);
+    grunt.registerTask('default', ['uglify', 'copy:all']);
 };
