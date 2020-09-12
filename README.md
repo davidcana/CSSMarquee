@@ -47,23 +47,21 @@ As an alternative you can download from [github](https://github.com/davidcana/CS
 Where **cssMarquee.min.js** is the minimized version of cssMarquee.
 
 Available configuration parameters are:
-<ul>
-    <li><strong>id</strong>. The id of the DOM element.</li>
-    <li><strong>element</strong>. The DOM element. It is required to set <strong>element</strong> or <strong>id</strong>. If both are set <strong>element</strong>is used.</li>
-    <li><strong>text</strong>. The text in the marque. If it is not set CSSMarquee uses the text in the DOM element. It is required to set <strong>text</strong> or some text in the DOM element.</li>
-    <li><strong>speed</strong>. The number of seconds to complete one iteration. Default is 15.</li>
-    <li><strong>pauseOnMouseEnter</strong>. If it is true the animation will be paused when a <em>mouseenter</em> event is triggered.</li>
-    <li><strong>playOnMouseLeave</strong>. If it is true the animation will be resumed when a <em>mouseleave</em> event is triggered.</li>
-    <li><strong>animation</strong>. The CSS animation to use. Default is <em>marqueeTextIndent {0}s linear infinite</em>. See the next chapter for more details.</li>
-</ul>
+
+*  **id**. The id of the DOM element.
+*  **element**. The DOM element. It is required to set **element** or **id**. If both are set **element**is used.
+*  **text**. The text in the marque. If it is not set CSSMarquee uses the text in the DOM element. It is required to set **text** or some text in the DOM element.
+*  **speed**. The number of seconds to complete one iteration. Default is 15.
+*  **pauseOnMouseEnter**. If it is true the animation will be paused when a **mouseenter** event is triggered.
+*  **playOnMouseLeave**. If it is true the animation will be resumed when a **mouseleave** event is triggered.
+*  **animation**. The CSS animation to use. Default is **marqueeTextIndent {0}s linear infinite**. See the next chapter for more details.
 
 Available methods for **CSSMarquee** instances are:
-<ul>
-    <li><strong>pause()</strong>. Pauses the animation.</li>
-    <li><strong>play()</strong>. Resumes the animation.</li>
-    <li><strong>updateText( newText )</strong>. Updates the text.</li>
-    <li><strong>destroy( removeText )</strong>. Stops the animation and remove all listeners. If <em>removeText</em> removes the text of the marquee.</li>
-</ul>
+*  **pause()**. Pauses the animation.
+*  **play()**. Resumes the animation.
+*  **updateText( newText )**. Updates the text.
+*  **destroy( removeText )**. Stops the animation and remove all listeners. If **removeText** removes the text of the marquee.
+
 
 Go to [test page](https://davidcana.github.io/CSSMarquee) to see **CSSMarquee** in action!
 
@@ -71,33 +69,44 @@ Go to [test page](https://davidcana.github.io/CSSMarquee) to see **CSSMarquee** 
 
 If you want to fully customize the CSS animation keep on reading this!
 
-Default <strong>animation</strong> is <em>marqueeTextIndent {0}s linear infinite</em>. You can customize it with the built in keyframes CSS animations or define a new one. The <em>{0}</em> part is replaced by **CSSMarquee** with the <strong>speed</strong> configuration parameter.
+Default **animation** is **marqueeTextIndent {0}s linear infinite**. You can customize it with the built in keyframes CSS animations or define a new one. The **{0}** part is replaced by **CSSMarquee** with the **speed** configuration parameter.
 
 **CSSMarquee** includes 2 keyframes CSS animations in the **style.css** file:
-<ul>
-    <li><strong>marqueeTranslateX</strong>. Uses <em>translateX</em> to animate.</li>
-    <li><strong>marqueeTextIndent</strong> (default). Animates the <em>text-indent</em> property.</li>
-</ul>
+
+*  **marqueeTextIndent** (default). Animates the **text-indent** property. Animation is from right to left.
+*  **marqueeTextIndentReverse** (default). Animates the **text-indent** property. Animation is from left to right.
+*  **marqueeTranslateX**. Uses **translateX** to animate. Animation is from right to left.
+*  **marqueeTranslateXReverse**. Uses **translateX** to animate. Animation is from left to right.
 
 The definitions of both in the **style.css** file are:
 
 ```css
+@keyframes marqueeTextIndent {
+    0%   { text-indent: 100% }
+    100% { text-indent: var(--marquee-text-size) }
+}
+
+@keyframes marqueeTextIndentReverse {
+    0%   { text-indent: var(--marquee-text-size)  }
+    100% { text-indent: 100% }
+}
+
 @keyframes marqueeTranslateX {
     0%   { transform: translateX( 100% ) }
     100% { transform: translateX( var(--marquee-text-size) ) }
 }
 
-@keyframes marqueeTextIndent {
-    0%   { text-indent: 100% }
-    100% { text-indent: var(--marquee-text-size) }
+@keyframes marqueeTranslateXReverse {
+    0%   { transform: translateX( var(--marquee-text-size) ) }
+    100% { transform: translateX( 100% ) }
 }
 ```
 
-The <strong>--marquee-text-size</strong> CSS variable is set by **CSSMarquee**. Its value depends on the length of the text to animate.
+The **--marquee-text-size** CSS variable is set by **CSSMarquee**. Its value depends on the length of the text to animate.
 
 Of course, if you are not going to use one of them you do not need to include it in you CSS files.
 
-Another option is to define a new keyframes CSS animation in one of your CSS files and customize the <strong>animation</strong> option to use it.
+Another option is to define a new keyframes CSS animation in one of your CSS files and customize the **animation** option to use it.
 
 ## License
 [LGPL](http://www.gnu.org/licenses/lgpl.html)

@@ -14,14 +14,24 @@ body {
     overflow: hidden;
 }
 
+@keyframes marqueeTextIndent {
+    0%   { text-indent: 100% }
+    100% { text-indent: var(--marquee-text-size) }
+}
+
+@keyframes marqueeTextIndentReverse {
+    0%   { text-indent: var(--marquee-text-size)  }
+    100% { text-indent: 100% }
+}
+
 @keyframes marqueeTranslateX {
     0%   { transform: translateX( 100% ) }
     100% { transform: translateX( var(--marquee-text-size) ) }
 }
 
-@keyframes marqueeTextIndent {
-    0%   { text-indent: 100% }
-    100% { text-indent: var(--marquee-text-size) }
+@keyframes marqueeTranslateXReverse {
+    0%   { transform: translateX( var(--marquee-text-size) ) }
+    100% { transform: translateX( 100% ) }
 }
 /* End of Marquee */
 

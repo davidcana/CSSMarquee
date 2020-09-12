@@ -64,7 +64,7 @@ var CSSMarquee = function ( defaults ) {
     };
     
     this.changeCSSVars = function(){
-        var em = Math.trunc( this.text.length * .8 );
+        var em = Math.trunc( this.text.length * .66 );
         //var em = this.text.length;
         //alert( this.text.length + ' : ' + em );
         document.documentElement.style.setProperty( '--marquee-text-size', -em + 'em' );
