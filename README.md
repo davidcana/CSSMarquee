@@ -71,10 +71,10 @@ If you want to fully customize the CSS animation keep on reading this!
 
 Default **animation** is **marqueeTextIndent {0}s linear infinite**. You can customize it with the built in keyframes CSS animations or define a new one. The **{0}** part is replaced by **CSSMarquee** with the **speed** configuration parameter.
 
-**CSSMarquee** includes 2 keyframes CSS animations in the **style.css** file:
+**CSSMarquee** includes 4 keyframes CSS animations in the **style.css** file:
 
-*  **marqueeTextIndent** (default). Animates the **text-indent** property. Animation is from right to left.
-*  **marqueeTextIndentReverse** (default). Animates the **text-indent** property. Animation is from left to right.
+*  **marqueeTextIndent** (used in default animation). Animates the **text-indent** property. Animation is from right to left.
+*  **marqueeTextIndentReverse**. Animates the **text-indent** property. Animation is from left to right.
 *  **marqueeTranslateX**. Uses **translateX** to animate. Animation is from right to left.
 *  **marqueeTranslateXReverse**. Uses **translateX** to animate. Animation is from left to right.
 
