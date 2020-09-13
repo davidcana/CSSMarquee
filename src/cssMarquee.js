@@ -106,3 +106,8 @@ var CSSMarquee = function ( defaults ) {
     // Initialize
     this.constructor();
 }
+
+// Register CSSMarquee if we are using Node
+if ( typeof module === 'object' && module.exports ) {
+    module.exports = CSSMarquee;
+}

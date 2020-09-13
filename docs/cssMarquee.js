@@ -1,5 +1,5 @@
 /*
-    CSSMarquee
+    CSSMarquee 0.2.0
     No dependencies javascript marquee based on CSS animations
 
 	var myMarquee = new AnimationMarquee({
@@ -9,7 +9,7 @@
         pauseOnMouseEnter: true,
         playOnMouseLeave: false,
         element: document.getElementById( 'aDiv' ),
-        animation: 'marquee {0}s ease-in-out infinite'
+        animation: 'marqueeTextIndentReverse {0}s linear infinite'
 	});
 */
 var CSSMarquee = function ( defaults ) {
@@ -105,4 +105,9 @@ var CSSMarquee = function ( defaults ) {
     
     // Initialize
     this.constructor();
+}
+
+// Register CSSMarquee if we are using Node
+if ( typeof module === 'object' && module.exports ) {
+    module.exports = CSSMarquee;
 }
