@@ -1,11 +1,11 @@
 # CSSMarquee
-**CSSMarquee** is a Javascript no dependencies javascript marquee based on CSS animations.
+**CSSMarquee** is a no dependencies javascript marquee based on CSS animations.
 
 Core features of **CSSMarquee** are:
 
 ## Installation
 
-**CSSMarquee** is registered as a package on [npm](https://www.npmjs.com/package/zpt). This is the recomended way of downloading it. You can install the latest version of CSSMarquee and its dependencies with the npm CLI command:
+**CSSMarquee** is published as a package on [npm](https://www.npmjs.com/package/zpt). This is the recomended way of downloading it. You can install the latest version of CSSMarquee and its dependencies with the npm CLI command:
 
 ```bash
 npm install css-marquee
